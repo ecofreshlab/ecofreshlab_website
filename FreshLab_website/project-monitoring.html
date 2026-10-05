@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecological Monitoring of Running Waters | EcoFreshLab</title>
+<style>
+:root{--primary:#1a5276;--secondary:#2980b9;--accent:#27ae60;--bg:#f5f8fa;--text:#263746}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.65;color:var(--text);background:var(--bg)}
+header{background:var(--primary);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px #0002}
+nav{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:#ffffff;text-decoration:none}.logo .eco{color:#2ecc71}.logo .lab{color:#a9dfbf}
+.nav-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}.nav-links a{color:white;text-decoration:none}.nav-links a:hover{color:#a9dfbf}
+.hero{padding:76px 24px;background:linear-gradient(90deg,#123c58dd,#123c5870),url('images/photo1.png') center/cover;color:white}
+.hero-inner{max-width:1100px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#bce8cf;font-weight:700}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;max-width:850px;margin:12px 0}
+.hero p{max-width:760px;font-size:1.05rem}
+main{max-width:1100px;margin:42px auto;padding:0 24px 50px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.project-card{display:flex;flex-direction:column;overflow:hidden;background:white;border-radius:12px;text-decoration:none;color:inherit;box-shadow:0 4px 18px #16364b12;border:1px solid #e5edf1;transition:transform .2s,box-shadow .2s}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 10px 26px #16364b20}
+.card-body{padding:23px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h2{font-size:1.25rem;line-height:1.35;color:var(--primary)}
+.meta{font-size:.91rem;color:#627381}.meta strong{color:#344e60}
+.card-link{margin-top:auto;padding-top:8px;color:var(--secondary);font-weight:700}
+.back-link{display:inline-block;margin-bottom:22px;color:var(--secondary);text-decoration:none;font-weight:700}
+.detail-hero{min-height:330px;display:flex;align-items:end;padding:45px 24px;background:linear-gradient(0deg,#0d2e43e8,#0d2e4340),url('images/photo1.png') center/cover;color:white}
+.detail-hero-inner{max-width:1100px;margin:auto;width:100%}.detail-hero h1{max-width:900px;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.2;margin:10px 0}
+.detail-content{max-width:1100px;margin:36px auto;padding:0 24px 60px}
+.project-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:34px}
+.fact{background:white;border:1px solid #e4edf1;border-radius:9px;padding:16px}.fact small{display:block;color:#6b7c88;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;font-weight:700}.fact strong{display:block;margin-top:5px;color:var(--primary)}
+.content-section{background:white;border:1px solid #e6edf1;border-radius:10px;padding:24px;margin:18px 0}
+.content-section h2{font-size:1.35rem;color:var(--primary);margin-bottom:10px}
+.content-section p{color:#465a68}
+.objective-list, .findings-list{padding-left:22px;color:#465a68;margin-top:8px}
+.objective-list li, .findings-list li{padding:6px 0}
+
+/* Styles για την γκαλερί των εικόνων στις Μεθόδους */
+.methods-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:20px}
+.methods-gallery figure{margin:0;border:1px solid #e3ecef;border-radius:8px;padding:12px;background:#f8fbfc;text-align:center;display:flex;flex-direction:column;justify-content:space-between}
+.methods-gallery img{width:100%;height:auto;max-height:420px;object-fit:contain;border-radius:6px;background:#ffffff}
+.methods-gallery figcaption{margin-top:10px;font-size:0.9rem;color:#555;line-height:1.4}
+
+.pub-card{border-left:4px solid var(--secondary);background:#f8fbfc;padding:16px;border-radius:6px;margin-top:12px}
+.pub-title{font-weight:700;color:var(--primary);margin-bottom:4px}
+.pub-authors{font-size:.92rem;color:#555}
+.pub-journal{font-size:.88rem;color:#777;font-style:italic;margin-top:4px}
+.pub-journal a{color:var(--secondary);text-decoration:none}
+.pub-journal a:hover{text-decoration:underline}
+footer{background:var(--primary);color:white;text-align:center;padding:25px 18px;font-size:.9rem}
+@media(max-width:700px){nav{align-items:flex-start;flex-direction:column}.nav-links{gap:12px}.hero{padding:55px 20px}}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html"><span class="eco">Eco</span>Fresh<span class="lab">Lab</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#research">Research Activities</a></li>
+      <li><a href="index.html#team">Our Team</a></li>
+      <li><a href="PROJECTS.html">Projects</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="detail-hero">
+  <div class="detail-hero-inner">
+    <div class="eyebrow">National Monitoring Program · Water Framework Directive (WFD 2000/60/EC)</div>
+    <h1>Ecological Monitoring of Running Waters of Greece, with the use of Aquatic Macrophytes</h1>
+    <p>Assessment and long-term monitoring of ecological status in Greek rivers and streams using aquatic macrophytes as biological quality elements.</p>
+  </div>
+</div>
+
+<main class="detail-content">
+  <a class="back-link" href="PROJECTS.html">← Back to all projects</a>
+
+  <div class="project-facts">
+    <div class="fact"><small>Funding / Contracting</small><strong>Hellenic Centre for Marine Research (HCMR)</strong></div>
+    <div class="fact"><small>Duration</small><strong>2025–2029</strong></div>
+    <div class="fact"><small>Principal Investigator</small><strong>Eva Papastergiadou</strong></div>
+  </div>
+
+  <section class="content-section">
+    <h2>Project overview</h2>
+    <p>In accordance with the European Water Framework Directive (WFD 2000/60/EC), national ecological monitoring is essential for evaluating the biological status, health, and trend of inland aquatic ecosystems. Aquatic macrophytes serve as key biological quality indicators in running waters due to their sensitivity to nutrient enrichment, hydromorphological alterations, flow regulation, and land-use pressures.</p>
+    <p>This long-term national project focuses on systematic sampling, assessment, and classification of ecological quality across Greek rivers and streams. By integrating macrophyte community metrics with water quality and habitat characteristics, the project provides vital evidence for water basin management plans and national environmental policies.</p>
+  </section>
+
+  <section class="content-section">
+    <h2>Research objectives</h2>
+    <ul class="objective-list">
+      <li>Perform systematic seasonal sampling and ecological status assessments across representative river monitoring sites in Greece.</li>
+      <li>Apply and refine macrophyte-based bioassessment indices tailored to Mediterranean river types.</li>
+      <li>Analyze long-term temporal community shifts and ecological responses to multiple stressors (climate change, drought, agricultural pollution, and hydromorphological degradation).</li>
+      <li>Support the implementation of the EU Water Framework Directive (WFD 2000/60/EC) in national water resources management.</li>
+    </ul>
+  </section>
+
+  <!-- Ενοποιημένη ενότητα Study areas & Methods -->
+  <section class="content-section">
+    <h2>Study areas & Methods</h2>
+    <p>Fieldwork spans river networks, main channels, and tributaries across multiple Water Districts in mainland Greece and islands. The sampling design covers diverse river types, ranging from lowland streams and Mediterranean temporary rivers to mid- and high-altitude mountain streams.</p>
+    <p style="margin-top: 10px;">Standardized WFD-compliant field sampling protocols are implemented across 100m sampling reaches. Submerged, floating-leaved, free-floating, and emergent macrophyte species composition and percentage coverage are recorded alongside physicochemical parameters (nutrients, pH, conductivity, dissolved oxygen) and hydromorphological features (River Habitat Survey framework).</p>
+    
+    <div class="methods-gallery">
+      <figure>
+        <a href="images/monit1.png" target="_blank" rel="noopener">
+          <img src="images/monit1.png" alt="Map showing the distribution of monitored river sites across Greece" loading="lazy">
+        </a>
+        <figcaption>Map showing the distribution of monitored river sites across Greece</figcaption>
+      </figure>
+      <figure>
+        <a href="images/monit2.jpg" target="_blank" rel="noopener">
+          <img src="images/monit2.jpg" alt="Ecological quality class boundaries of the normalized IBMRGR index" loading="lazy">
+        </a>
+        <figcaption>Ecological quality class boundaries of the normalized IBMRGR index</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Key Scientific Outputs & Publications</h2>
+    <p>Data gathered through nationwide ecological monitoring over the past decade provide unique insights into water quality trends, community dynamics, and multi-stressor responses in Greek lotic ecosystems.</p>
+
+    <!-- Paper 1 -->
+    <div class="pub-card">
+      <div class="pub-title">A decade of macrophyte-based ecological monitoring in rivers and streams of Greece – assessing changes in ecological quality and temporal community shifts (2026)</div>
+      <div class="pub-authors">Stefanidis K., Dimitrellos G., Tsoukalas D., Papastergiadou E.</div>
+      <div class="pub-journal">Frontiers in Environmental Science, 14: 1770709 — DOI: <a href="https://doi.org/10.3389/fenvs.2026.1770709" target="_blank" rel="noopener">10.3389/fenvs.2026.1770709</a></div>
+    </div>
+
+    <!-- Paper 2 -->
+    <div class="pub-card">
+      <div class="pub-title">Beyond taxonomic diversity patterns – investigating how α and β components of macrophyte functional diversity respond to environmental gradients in lotic ecosystems of Greece (2023)</div>
+      <div class="pub-authors">Stefanidis K., Oikonomou A., Dimitrellos G., Tsoukalas D., Papastergiadou E.</div>
+      <div class="pub-journal">Frontiers in Plant Science, 14: 1204383 — DOI: <a href="https://doi.org/10.3389/fpls.2023.1204383" target="_blank" rel="noopener">10.3389/fpls.2023.1204383</a></div>
+    </div>
+
+    <!-- Paper 3 -->
+    <div class="pub-card">
+      <div class="pub-title">Ecological Quality Assessment of Greek Lowland Rivers with Aquatic Macrophytes in Compliance with the EU Water Framework Directive (2022)</div>
+      <div class="pub-authors">Stefanidis K., Dimitrellos G., Sarika M., Tsoukalas D., Papastergiadou E.</div>
+      <div class="pub-journal">Water, 14(18): 2771 — DOI: <a href="https://doi.org/10.3390/w14182771" target="_blank" rel="noopener">10.3390/w14182771</a></div>
+    </div>
+
+    <!-- Paper 4 -->
+    <div class="pub-card">
+      <div class="pub-title">Responses of different facets of aquatic plant diversity along environmental gradients in Mediterranean streams: Results from rivers of Greece (2021)</div>
+      <div class="pub-authors">Stefanidis K., Oikonomou A., Papastergiadou E.</div>
+      <div class="pub-journal">Journal of Environmental Management, 296: 113307 — DOI: <a href="https://doi.org/10.1016/j.jenvman.2021.113307" target="_blank" rel="noopener">10.1016/j.jenvman.2021.113307</a></div>
+    </div>
+  </section>
+</main>
+
+<footer>© 2026 EcoFreshLab – Freshwater Ecology Lab | Department of Biology, University of Patras</footer>
+
+</body>
+</html>

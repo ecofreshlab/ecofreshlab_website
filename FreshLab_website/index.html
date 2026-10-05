@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoFreshLab | Freshwater Ecology Lab - University of Patras</title>
+  <style>
+    :root {
+      --primary: #1a5276;
+      --secondary: #2980b9;
+      --accent: #27ae60;
+      --bg: #f8f9fa;
+      --text: #2c3e50;
+      --light-bg: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); }
+    
+    header { background: var(--primary); color: white; padding: 1rem 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+    
+    /* Νέο στυλ για το λογότυπο EcoFreshLab */
+    .logo { font-size: 1.4rem; font-weight: bold; letter-spacing: 0.5px; color: #ffffff; }
+    .logo .eco { color: #2ecc71; }
+    .logo .lab { color: #a9dfbf; }
+
+    .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-links a { color: white; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    .nav-links a:hover, .nav-links a.active { color: #a9dfbf; }
+
+    .hero { 
+      background: linear-gradient(rgba(26, 82, 118, 0.75), rgba(41, 128, 185, 0.30)), 
+                  url('images/photo1.png') center/cover no-repeat; 
+      color: white; 
+      padding: 6rem 1.5rem; 
+      text-align: center; 
+    }
+    .hero h1 { font-size: 2.8rem; margin-bottom: 0.5rem; }
+    .hero h2 { font-size: 1.4rem; font-weight: 400; opacity: 0.9; border: none; padding: 0; color: #a9dfbf; }
+    .hero p { font-size: 1.1rem; max-width: 800px; margin: 1.5rem auto 0 auto; opacity: 0.95; }
+
+    section { max-width: 1100px; margin: 3rem auto; padding: 2rem 1.5rem; background: var(--light-bg); border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    h2 { color: var(--primary); margin-bottom: 1.5rem; border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; display: inline-block; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
+    .card { background: var(--bg); padding: 1.5rem; border-radius: 6px; border-left: 4px solid var(--secondary); }
+    .card h3 { color: var(--primary); margin-bottom: 0.5rem; }
+
+    /* Team Section Styles */
+    .team-card { background: var(--bg); padding: 1.5rem; border-radius: 8px; text-align: center; border: 1px solid #e0e0e0; }
+    .team-card h3 { color: var(--primary); margin-bottom: 0.2rem; }
+    .team-role { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-bottom: 0.8rem; }
+    .btn-cv { display: inline-block; margin-top: 1rem; padding: 0.4rem 1rem; background: var(--secondary); color: white; text-decoration: none; border-radius: 4px; font-size: 0.85rem; transition: background 0.3s; }
+    .btn-cv:hover { background: var(--primary); }
+
+    .pub-item { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #eee; }
+    .pub-title { font-weight: bold; color: var(--primary); }
+    .pub-authors { font-size: 0.95rem; color: #555; }
+    .pub-journal { font-style: italic; font-size: 0.9rem; color: #777; }
+    .badge { display: inline-block; background: var(--accent); color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.8rem; margin-left: 5px; }
+    .doi-link { color: var(--secondary); text-decoration: none; font-size: 0.9rem; word-break: break-all; }
+    .doi-link:hover { text-decoration: underline; }
+
+    .useful-links-list { list-style: none; padding-left: 0; }
+    .useful-links-list li { margin-bottom: 0.8rem; }
+    .useful-links-list a { color: var(--secondary); text-decoration: none; font-weight: 600; }
+    .useful-links-list a:hover { text-decoration: underline; }
+
+    footer { text-align: center; padding: 2rem; background: var(--primary); color: white; margin-top: 4rem; }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero h2 { font-size: 1.1rem; }
+    }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo"><span class="eco">Eco</span>Fresh<span class="lab">Lab</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research Activities</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="PROJECTS.html">Projects</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#useful-links">Useful Links</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Freshwater Ecology Lab</h1>
+    <h2>Department of Biology, University of Patras</h2>
+    <p>Investigating freshwater biodiversity, ecological processes, and ecosystem functions under global change.</p>
+  </div>
+
+  <section id="about">
+    <h2>About Our Research</h2>
+    <p>Our research team is based in the Department of Biology at the University of Patras and is dedicated to advancing the understanding and conservation of freshwater ecosystems. We have extensive experience in monitoring freshwater biodiversity and assessing the ecological quality of surface waters, with particular emphasis on the requirements of the EU Water Framework Directive (WFD 2000/60/EC). We investigate global and climate change impacts on freshwater ecosystems, integrating eco-hydrology to study how hydromorphology shapes ecological processes. In addition, our research highlights the critical role of aquatic macrophytes in driving ecosystem metabolism and supporting essential ecological functions.</p>
+  </section>
+
+  <section id="research">
+    <h2>Research Activities</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Biodiversity Monitoring & Conservation</h3>
+        <p>Monitoring and assessing the diversity, distribution, and conservation status of freshwater plants, while developing effective conservation strategies to protect species, habitats, and freshwater biodiversity.</p>
+      </div>
+      <div class="card">
+        <h3>Climate Change & Ecosystem Functions</h3>
+        <p>Experimental and observational studies on how climate change affects aquatic communities, primary production, and ecosystem metabolism.</p>
+      </div>
+      <div class="card">
+        <h3>Eco-hydrology & Hydromorphology</h3>
+        <p>Understanding the role of hydromorphological dynamics in shaping biodiversity and driving ecological processes in river systems.</p>
+      </div>
+      <div class="card">
+        <h3>Water Framework Directive (WFD)</h3>
+        <p>Ecological quality assessments of inland waters in compliance with European environmental policies and conservation goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="grid">
+      
+      <!-- Member 1: Prof. Eva Papastergiadou -->
+      <div class="team-card">
+        <h3>Prof. Eva Papastergiadou</h3>
+        <div class="team-role">Professor</div>
+        <p>Specializes in management of aquatic ecosystems & wetlands, ecology of aquatic plants, habitat monitoring, and the Water Framework Directive (WFD 2000/60).</p>
+        <a href="cv-papastergiadou.pdf" target="_blank" class="btn-cv">View Short CV (PDF)</a>
+      </div>
+
+      <!-- Member 2: Dr. Konstantinos Stefanidis -->
+      <div class="team-card">
+        <h3>Dr. Konstantinos Stefanidis</h3>
+        <div class="team-role">Assistant Professor</div>
+        <p>Specializes in freshwater ecology, climate change impacts on freshwater ecosystems, eco-hydrology, and ecological modeling.</p>
+        <a href="cv-stefanidis.pdf" target="_blank" class="btn-cv">View Short CV (PDF)</a>
+      </div>
+
+      <!-- Member 3: Georgios Dimitrellos -->
+      <div class="team-card">
+        <h3>Georgios Dimitrellos</h3>
+        <div class="team-role">Research Assistant</div>
+        <p>Specializes in habitat mapping & assessment, systematic taxonomy and flora identification, and vegetation ecology.</p>
+        <a href="cv-dimitrellos.pdf" target="_blank" class="btn-cv">View Short CV (PDF)</a>
+      </div>
+
+      <!-- Member 4: Dionysios Tsoukalas -->
+      <div class="team-card">
+        <h3>Dionysios Tsoukalas</h3>
+        <div class="team-role">Research Assistant</div>
+        <p>Specializes in database management, statistical analysis, and IT support for research data.</p>
+        <a href="cv-tsoukalas.pdf" target="_blank" class="btn-cv">View Short CV (PDF)</a>
+      </div>
+
+      <!-- Member 5: Ioanna Xynogala -->
+      <div class="team-card">
+        <h3>Ioanna Xynogala</h3>
+        <div class="team-role">PhD Candidate</div>
+        <p>Specializes in eco-hydrology, hydromorphological assessment, and macrophyte monitoring in river systems.</p>
+        <a href="cv-xynogala.pdf" target="_blank" class="btn-cv">View Short CV (PDF)</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Latest Publications</h2>
+    
+    <div class="pub-item">
+      <div class="pub-title">A decade of macrophyte-based ecological monitoring in rivers and streams of Greece – assessing changes in ecological quality and temporal community shifts (2026) <span class="badge">WFD Monitoring</span></div>
+      <div class="pub-authors">Stefanidis K., Dimitrellos G., Tsoukalas D., Papastergiadou E.</div>
+      <div class="pub-journal">Frontiers in Environmental Science — DOI: <a href="https://doi.org/10.3389/fenvs.2026.1770709" target="_blank" class="doi-link">10.3389/fenvs.2026.1770709</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Exploring the Geodiversity—Biodiversity Relationships in Freshwaters for Environmental Conservation: A Global Systematic Literature Review (2026) <span class="badge">Conservation</span></div>
+      <div class="pub-authors">Xynogala I., Papastergiadou E., Alahuhta J., Dimitriou E., Ramfos A., Stefanidis K.</div>
+      <div class="pub-journal">Aquatic Conservation: Marine and Freshwater Ecosystems — DOI: <a href="https://doi.org/10.1002/aqc.70463" target="_blank" class="doi-link">10.1002/aqc.70463</a></div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-title">Expanding the habitat quality assessment of rivers in Greece using an updated River Habitat Survey toolbox (2025) <span class="badge">Habitat Quality</span></div>
+      <div class="pub-authors">Stefanidis K., Naura M., Kouvarda T., Latsiou A., Gritzalis K., Dimitriou E.</div>
+      <div class="pub-journal">Ecohydrology and Hydrobiology — DOI: <a href="https://doi.org/10.1016/j.ecohyd.2024.07.005" target="_blank" class="doi-link">10.1016/j.ecohyd.2024.07.005</a></div>
+    </div>
+
+    <div style="margin-top: 1.5rem;">
+      <a href="publications.html" target="_blank" class="btn-cv" style="font-size: 1rem; padding: 0.6rem 1.2rem;">
+        → View Full Publication List 
+      </a>
+    </div>
+  </section>
+
+  <section id="useful-links">
+    <h2>Useful Links</h2>
+    <ul class="useful-links-list">
+      <li>
+        <a href="https://biology.upatras.gr/" target="_blank" rel="noopener noreferrer">Department of Biology, Upatras</a>
+      </li>
+      <li>
+        <a href="https://wfd24.hcmr.gr/" target="_blank" rel="noopener noreferrer">WFD Monitoring Greece</a>
+      </li>
+      <li>
+        <a href="https://www.internationalaquaticplantsgroup.com/" target="_blank" rel="noopener noreferrer">International Aquatic Plants Group</a>
+      </li>
+      <li>
+        <a href="https://www.riverhabitatsurvey.org/" target="_blank" rel="noopener noreferrer">River Habitat Survey</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Location</h2>
+    <p><strong>Freshwater Ecology Lab (EcoFreshLab)</strong><br>
+    Department of Biology<br>
+    University of Patras, University Campus, 26504 Rio, Patras, Greece</p>
+    <br>
+    <p><strong>Email:</strong> <a href="mailto:kstefani@upatras.gr">kstefani@upatras.gr</a><br>
+    <strong>Tel:</strong> +30 2610 969245 | +30 2610 997648<br>
+    <strong>ResearchGate:</strong> <a href="https://www.researchgate.net/profile/Konstantinos-Stefanidis-2?ev=hdr_xprf" target="_blank">Konstantinos Stefanidis Profile</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 EcoFreshLab - Freshwater Ecology Lab | Department of Biology, University of Patras</p>
+  </footer>
+
+</body>
+</html>

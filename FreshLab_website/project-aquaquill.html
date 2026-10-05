@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AQUAQUILL | EcoFreshLab</title><style>
+:root{--primary:#1a5276;--secondary:#2980b9;--accent:#27ae60;--bg:#f5f8fa;--text:#263746}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;line-height:1.65;color:var(--text);background:var(--bg)}
+header{background:var(--primary);color:#fff;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px #0002}
+nav{max-width:1100px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.logo{font-size:1.4rem;font-weight:700;color:#ffffff;text-decoration:none}.logo .eco{color:#2ecc71}.logo .lab{color:#a9dfbf}
+.nav-links{display:flex;gap:20px;list-style:none;flex-wrap:wrap}.nav-links a{color:white;text-decoration:none}.nav-links a:hover{color:#a9dfbf}
+.hero{padding:76px 24px;background:linear-gradient(90deg,#123c58dd,#123c5870),url('images/photo1.png') center/cover;color:white}
+.hero-inner{max-width:1100px;margin:auto}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;color:#bce8cf;font-weight:700}
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);line-height:1.15;max-width:850px;margin:12px 0}
+.hero p{max-width:760px;font-size:1.05rem}
+main{max-width:1100px;margin:42px auto;padding:0 24px 50px}
+.intro{margin-bottom:28px}.intro h1{color:var(--primary);font-size:2.1rem}.intro p{max-width:760px;margin-top:8px;color:#526474}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px}
+.project-card{display:flex;flex-direction:column;overflow:hidden;background:white;border-radius:12px;text-decoration:none;color:inherit;box-shadow:0 4px 18px #16364b12;border:1px solid #e5edf1;transition:transform .2s,box-shadow .2s}
+.project-card:hover{transform:translateY(-4px);box-shadow:0 10px 26px #16364b20}
+.project-image{height:210px;background:linear-gradient(135deg,#174d6a,#2d8b83);position:relative;overflow:hidden}
+.project-image img{width:100%;height:100%;object-fit:cover}
+.project-image.quillwort{background:radial-gradient(ellipse at 50% 100%,#86a978 0,#285b55 35%,#123e55 100%)}
+.project-image.quillwort:after{content:'Isoetes';position:absolute;right:18px;bottom:12px;color:#ffffffbb;font-size:1.3rem;font-style:italic}
+.card-body{padding:23px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card-body h2{font-size:1.25rem;line-height:1.35;color:var(--primary)}
+.meta{font-size:.91rem;color:#627381}.meta strong{color:#344e60}
+.card-link{margin-top:auto;padding-top:8px;color:var(--secondary);font-weight:700}
+.back-link{display:inline-block;margin-bottom:22px;color:var(--secondary);text-decoration:none;font-weight:700}
+.detail-hero{min-height:330px;display:flex;align-items:end;padding:45px 24px;background:linear-gradient(0deg,#0d2e43e8,#0d2e4340),url('images/photo1.png') center/cover;color:white}
+.detail-hero.quillwort-hero{background:linear-gradient(0deg,#0d2e43e8,#0d2e4350),url('images/isoetes1.jpg') center/cover no-repeat}
+.detail-hero-inner{max-width:1100px;margin:auto;width:100%}.detail-hero h1{max-width:900px;font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.2;margin:10px 0}
+.detail-content{max-width:1100px;margin:36px auto;padding:0 24px 60px}
+.project-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;margin-bottom:34px}
+.fact{background:white;border:1px solid #e4edf1;border-radius:9px;padding:16px}.fact small{display:block;color:#6b7c88;text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;font-weight:700}.fact strong{display:block;margin-top:5px;color:var(--primary)}
+.content-section{background:white;border:1px solid #e6edf1;border-radius:10px;padding:24px;margin:18px 0}
+.content-section h2{font-size:1.35rem;color:var(--primary);margin-bottom:10px}
+.content-section p{color:#465a68}.to-add{border-left:4px solid #d6a84b;background:#fffaf0;padding:13px 16px;margin-top:12px;color:#66532c;font-size:.94rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:15px}
+footer{background:var(--primary);color:white;text-align:center;padding:25px 18px;font-size:.9rem}
+@media(max-width:700px){nav{align-items:flex-start;flex-direction:column}.nav-links{gap:12px}.hero{padding:55px 20px}}
+</style><style>
+.species-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:18px}
+.species-card{padding:18px;border:1px solid #e3ecef;border-radius:9px;background:#f8fbfc}
+.species-card h3{color:var(--primary);font-size:1.08rem;margin-bottom:8px}
+.species-card p{font-size:.94rem;color:#465a68}
+.objective-list{padding-left:22px;color:#465a68}
+.objective-list li{padding:5px 0 5px 4px}
+.findings-list{padding-left:22px;color:#465a68;margin-top:8px}.findings-list li{padding:7px 0 7px 4px}
+.fieldwork-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:18px}
+.fieldwork-gallery figure{margin:0;min-width:0}.fieldwork-gallery a{display:block;overflow:hidden;border-radius:9px;background:#e7eef0;aspect-ratio:4/3;box-shadow:0 3px 12px #16364b18}
+.fieldwork-gallery img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.fieldwork-gallery a:hover img{transform:scale(1.04)}
+.fieldwork-gallery figcaption{padding:8px 2px 2px;color:#465a68;font-size:.9rem;line-height:1.45}
+</style></head><body>
+<header><nav><a class="logo" href="index.html"><span class="eco">Eco</span>Fresh<span class="lab">Lab</span></a>
+<ul class="nav-links"><li><a href="index.html#about">About</a></li><li><a href="index.html#research">Research Activities</a></li><li><a href="index.html#team">Our Team</a></li><li><a href="PROJECTS.html">Projects</a></li><li><a href="index.html#publications">Publications</a></li><li><a href="index.html#contact">Contact</a></li></ul></nav></header>
+
+<div class="detail-hero quillwort-hero"><div class="detail-hero-inner"><div class="eyebrow">Research project · Aquatic plant conservation</div>
+<h1>AQUAQUILL: Filling the Wallacean Shortfall for the Aquatic Quillworts</h1>
+<p>Improving knowledge of the distribution, populations and conservation needs of selected aquatic quillworts in Greece.</p></div></div>
+
+<main class="detail-content">
+<a class="back-link" href="PROJECTS.html">← Back to all projects</a>
+
+<div class="project-facts">
+<div class="fact"><small>Funding</small><strong>NECCA</strong></div>
+<div class="fact"><small>Duration</small><strong>2025–2026</strong></div>
+<div class="fact"><small>Principal Investigator</small><strong>Konstantinos Stefanidis</strong></div>
+</div>
+
+<section class="content-section">
+<h2>Project overview</h2>
+<p>Freshwater plants remain under-recorded in many regions, limiting our understanding of changes in their distribution and conservation status. This knowledge gap is particularly evident for <em>Isoetes</em> (quillworts), a distinctive and ancient lineage of aquatic and semi-aquatic lycopods whose small, grass-like appearance can make them easy to overlook during field surveys.</p>
+<p>In Greece, the distribution of several <em>Isoetes</em> species is still incompletely known. AQUAQUILL addresses this knowledge gap, with particular emphasis on the two Greek endemic quillworts, <em>I. heldreichii</em> and <em>I. haussknechtii</em>. The project aims to improve information on their occurrence, population status, habitat conditions and potential threats, while also contributing DNA barcode data for selected Greek species.</p>
+</section>
+
+<section class="content-section">
+<h2>Target species</h2>
+<p>The project focuses on four species for which additional field information and/or DNA barcode data are needed:</p>
+<div class="species-grid">
+<div class="species-card"><h3><em>Isoetes heldreichii</em></h3><p>Greek endemic historically recorded near Palaiokastro, Thessaly. It has not been recorded since its original description and is assessed as Critically Endangered (Possibly Extinct). Surveys are needed to investigate whether it persists at nearby freshwater habitats.</p></div>
+<div class="species-card"><h3><em>Isoetes haussknechtii</em></h3><p>Greek endemic known from localities in Thessaly, Central Peloponnese and Lesvos. Its population trend is not yet known, highlighting the need to assess its populations, local abundance and habitat conditions.</p></div>
+<div class="species-card"><h3><em>Isoetes phrygia</em></h3><p>A range-restricted species recorded in Türkiye and at a small number of localities in Crete. The project includes targeted sampling to obtain material for DNA barcoding.</p></div>
+<div class="species-card"><h3><em>Isoetes todaroana</em></h3><p>Previously considered endemic to Italy and more recently recorded in western Greece. Targeted field visits will collect specimens to contribute barcode data for this species.</p></div>
+</div>
+</section>
+
+<section class="content-section">
+<h2>Research objectives</h2>
+<ul class="objective-list">
+<li>Search for <em>I. heldreichii</em> and <em>I. haussknechtii</em> in freshwater ecosystems of Thessaly.</li>
+<li>Assess known populations and habitats of <em>I. haussknechtii</em> in Central Peloponnese and Lesvos.</li>
+<li>Collect selected <em>Isoetes</em> specimens and generate DNA barcodes to improve publicly available molecular reference databases.</li>
+</ul>
+</section>
+
+<section class="content-section">
+  <h2>Study areas & fieldwork</h2>
+  <p>Fieldwork spans representative river networks, lakes, and transitional water bodies across Greece. Systematic seasonal sampling is carried out to record aquatic flora, water quality parameters, and hydromorphological features.</p>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="images/field1.jpg" alt="Fieldwork sampling site 1" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
+      <small style="display:block; margin-top:6px; color:#555; text-align:center;">Lesvos</small>
+    </div>
+    <div class="gallery-item">
+      <img src="images/field2.jpg" alt="Fieldwork sampling site 2" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
+      <small style="display:block; margin-top:6px; color:#555; text-align:center;">Lesvos</small>
+    </div>
+    <div class="gallery-item">
+      <img src="images/field3.jpg" alt="Fieldwork sampling site 3" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
+      <small style="display:block; margin-top:6px; color:#555; text-align:center;">Lesvos</small>
+    </div>
+    <div class="gallery-item">
+      <img src="images/field4.jpg" alt="Fieldwork sampling site 4" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
+      <small style="display:block; margin-top:6px; color:#555; text-align:center;">Lake Plastira</small>
+    </div>
+    <div class="gallery-item">
+      <img src="images/field5.jpg" alt="Fieldwork sampling site 5" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
+      <small style="display:block; margin-top:6px; color:#555; text-align:center;">Crete</small>
+    </div>
+    <div class="gallery-item">
+      <img src="images/field6.jpg" alt="Fieldwork sampling site 6" style="width:100%; height:180px; object-fit:cover; border-radius:8px;">
+      <small style="display:block; margin-top:6px; color:#555; text-align:center;">Crete</small>
+    </div>
+  </div>
+</section>
+
+<section class="content-section">
+<h2>Methods</h2>
+<p>The project combines targeted field surveys, habitat assessment, specimen identification and DNA barcoding. Fieldwork is planned across suitable seasons, taking into account the aquatic or semi-aquatic habitats and seasonal moisture requirements of quillworts. Specimens collected during the surveys will be examined and selected material will be submitted for DNA barcode analysis at certified laboratories.</p>
+</section>
+
+<section class="content-section">
+<h2>Expected scientific and conservation contribution</h2>
+<p>AQUAQUILL is expected to improve knowledge of the distribution and population status of Greek quillworts, particularly the two endemic species. New records and population information can support future reassessments of their conservation status. Data on habitat conditions and potential pressures will help identify conservation needs, while DNA barcodes will contribute to filling gaps in molecular reference databases for Greek <em>Isoetes</em>.</p>
+</section>
+
+<section class="content-section" id="results">
+<h2>Results</h2>
+<h3 style="color:var(--primary);font-size:1.08rem;margin:12px 0 6px">Main Findings</h3>
+<ul class="findings-list">
+<li>Habitats have declined due to extensive drought conditions, overgrazing and other anthropogenic activities.</li>
+<li><em>Isoetes haussknechtii</em>, a Greek endemic, was found at one location on Lesvos, almost 20 years after its latest record. Specimens were collected and molecular analysis was conducted for DNA barcode deposition.</li>
+<li><em>Isoetes heldreichii</em> was not found and is presumed extinct. However, additional sampling in mountainous wetlands of Western Greece may reveal previously undetected populations.</li>
+<li>A large population of <em>Isoetes phrygia</em> persists in Lake Omalos, Crete. The lake retains some water even during harsh summer conditions, allowing the population to survive. It is also the location of the newly described Greek endemic <em>Ranunculus dahlgreniae</em>.</li>
+<li><em>Elodea canadensis</em> was also recorded in summer 2025, representing the first record of this species in Greece.</li>
+<li>Habitats of <em>Isoetes todaroana</em> at coastal locations in western Greece have been heavily degraded, and the species was not found.</li>
+</ul>
+</section>
+
+<section class="content-section">
+<h2>Fieldwork Photos</h2>
+<p>Photographs from the AQUAQUILL field surveys.</p>
+<div class="fieldwork-gallery">
+<figure><a href="images/isoetes2.jpg" target="_blank" rel="noopener"><img src="images/isoetes2.jpg" alt="Isoetes phrygia in Lake Omalos, summer 2025" loading="lazy"></a><figcaption><em>Isoetes phrygia</em> in Lake Omalos, summer 2025</figcaption></figure>
+<figure><a href="images/isoetes3.jpg" target="_blank" rel="noopener"><img src="images/isoetes3.jpg" alt="A unique forest spring wetland in Lesvos where Isoetes haussknechtii was found" loading="lazy"></a><figcaption>A unique forest spring wetland in Lesvos where <em>Isoetes haussknechtii</em> was found</figcaption></figure>
+<figure><a href="images/isoetes4.jpg" target="_blank" rel="noopener"><img src="images/isoetes4.jpg" alt="Isoetes haussknechtii" loading="lazy"></a><figcaption><em>Isoetes haussknechtii</em></figcaption></figure>
+<figure><a href="images/isoetes5.jpg" target="_blank" rel="noopener"><img src="images/isoetes5.jpg" alt="Aerial photo captured by drone showing the spring wetland in Lesvos" loading="lazy"></a><figcaption>Aerial photo captured by drone showing the spring wetland in Lesvos</figcaption></figure>
+<figure><a href="images/isoetes6.jpg" target="_blank" rel="noopener"><img src="images/isoetes6.jpg" alt="Lake Omalos in Crete" loading="lazy"></a><figcaption>Lake Omalos in Crete</figcaption></figure>
+<figure><a href="images/isoetes7.jpg" target="_blank" rel="noopener"><img src="images/isoetes7.jpg" alt="Lake Omalos in Crete" loading="lazy"></a><figcaption>Lake Omalos in Crete</figcaption></figure>
+<figure><a href="images/isoetes8.jpg" target="_blank" rel="noopener"><img src="images/isoetes8.jpg" alt="An assemblage of Ranunculus dahlgreniae" loading="lazy"></a><figcaption>An assemblage of <em>Ranunculus dahlgreniae</em></figcaption></figure>
+<figure><a href="images/isoetes9.jpg" target="_blank" rel="noopener"><img src="images/isoetes9.jpg" alt="First record of Elodea canadensis" loading="lazy"></a><figcaption>First record of <em>Elodea canadensis</em></figcaption></figure>
+<figure><a href="images/isoetes10.jpg" target="_blank" rel="noopener"><img src="images/isoetes10.jpg" alt="Elodea canadensis" loading="lazy"></a><figcaption><em>Elodea canadensis</em></figcaption></figure>
+</div>
+</section>
+</main>
+
+<footer>© 2026 EcoFreshLab – Freshwater Ecology Lab | Department of Biology, University of Patras</footer>
+</body></html>
